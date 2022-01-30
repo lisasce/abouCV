@@ -2,7 +2,7 @@
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
     <span [ngSwitch]="node.type">
       <a *ngSwitchCase="'email'" href="mailto:{{node.name}}
-         ?body=Hi John%20Doe,%0D%0A%0D%0Ai%20have%20a%20question:%20">{{node.name}}</a>
+         ?body=Hi Nihad%20Abou-Zid,%0D%0A%0D%0Ai%20have%20a%20question:%20">{{node.name}}</a>
       <a *ngSwitchCase="'phone'" href="tel:{{node.name}}">{{node.name}}</a>
       <a *ngSwitchDefault>{{node.name}}</a>
     </span>

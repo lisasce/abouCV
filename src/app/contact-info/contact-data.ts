@@ -4,22 +4,22 @@ export const files = [
     name: '',
     type: 'email',
     children:  [
-      { name: 'john.doe@gmail.com', type: 'email'}
+      { name: 'nihad.abouzid@gmail.com', type: 'email'}
     ]
   },
   {
     name: '',
     type: 'phone',
     children:  [
-      { name: '+43 670 000 00 00', type: 'phone'}
+      { name: '+43 650 957 81 88', type: 'phone'}
     ]
   },
   {
     name: '',
     type: 'home',
     children: [
-      { name: 'whatever street 5'},
-      { name: 'A-1100 Somewhere'}
+      { name: 'Steinmetzgasse 5/2'},
+      { name: 'A-2320 Schwechat'}
     ]
   }
 ];

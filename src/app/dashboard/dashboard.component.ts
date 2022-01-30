@@ -20,7 +20,7 @@ export class DashboardComponent {
   @Output() selectedCardChange = new EventEmitter<string>();
   selectedCard = 'welcome';
 
-  rippleColor = '#F8BBD0';
+  rippleColor = '#8BC34A';
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -36,11 +36,11 @@ export class DashboardComponent {
       }
 
       return [
-        { title: 'Professional Experience', cols: 3, rows: 1, color: '#CFD8DC', value: 'professional' },
-        { title: '', cols: 1, rows: 3, color: 'url("https://cdn.pixabay.com/photo/2015/07/20/12/53/gehlert-852762__480.jpg")', value: 'me' },
-        { title: 'Special Skills', cols: 1, rows: 2, color: '#F06292', value: 'skills' },
+        { title: 'Professional Experience', cols: 3, rows: 1, color: '#AED581', value: 'professional' },
+        { title: '', cols: 1, rows: 3, color: 'url("https://ngdevs.net/img/nihad.jpg")', value: 'me' },
+        { title: 'Special Skills', cols: 1, rows: 2, color: '#C8E6C9', value: 'skills' },
         { title: 'Educational Background', cols: 2, rows: 2, color: '', value: 'education' },
-        { title: 'Bachelor & Master Theses', cols: 4, rows: 1, color: '#90A4AE', value: 'theses' }
+        { title: 'Bachelor & Master Theses', cols: 4, rows: 1, color: '#81C784', value: 'theses' }
       ];
     })
   );

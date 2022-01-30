@@ -16,8 +16,8 @@
     <mat-nav-list>
       <who-contact-info></who-contact-info>
       <a mat-list-item [cdkCopyToClipboard]="visitcard"><span>Copy contact <br>to clipboard</span></a>
-      <a mat-list-item href="assets/test.pdf" download="cvEnglishDoe">CV pdf De</a>
-      <a mat-list-item href="cvGermanDoe">CV pdf En</a>
+      <a mat-list-item href="assets/CVDE.pdf" download="cvGermanAbouZid">CV pdf De</a>
+      <a mat-list-item href="assets/CVEN.pdf" download="cvEnglishAbouZid">CV pdf En</a>
 
     </mat-nav-list>
   </mat-sidenav>
@@ -31,7 +31,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <h1>John Doe</h1>
+      <h1>Nihad Abou-Zid</h1>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content></ng-content>
