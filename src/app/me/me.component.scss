@@ -1,0 +1,68 @@
+.me {
+  position: absolute; // needed here to overwrite mat-card position relative
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-box{
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+div.polaroidContainer {
+  width: 100%;
+  padding: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.polaroid {
+  width: 250px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #303030;
+}
+
+div.rotate_left {
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+
+div.rotate_right {
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+
+.small-card {
+  opacity: 80%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: fit-content;
+  width: fit-content;
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.centering{
+  margin: auto;
+}

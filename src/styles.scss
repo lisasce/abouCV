@@ -1,0 +1,41 @@
+@import '~src/theme';
+
+$mat-light-theme: mat-light-theme($primary, $accent, $warn);
+$mat-dark-theme: mat-dark-theme($primary, $accent, $warn);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.theme-dark{
+  @include  angular-material-theme($mat-dark-theme);
+}
+
+.theme-light{
+  @include  angular-material-theme($mat-light-theme);
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.subcard {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+
+a {
+  color: mat-color($primary);
+  text-decoration: none;
+}
+
+a:visited {
+  color: mat-color($accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: mat-color($warn);
+  text-decoration: underline;
+}

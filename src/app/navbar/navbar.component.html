@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+        <span>
+          <mat-slide-toggle
+            [checked]="isDarkMode"
+            (change)="onDarkModeSwitched($event)"
+          >
+            <small>Dark Mode</small>
+          </mat-slide-toggle>
+        </span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <who-contact-info></who-contact-info>
+      <a mat-list-item [cdkCopyToClipboard]="visitcard"><span>Copy contact <br>to clipboard</span></a>
+      <a mat-list-item href="assets/test.pdf" download="cvEnglishDoe">CV pdf De</a>
+      <a mat-list-item href="cvGermanDoe">CV pdf En</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="accent">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <h1>John Doe</h1>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

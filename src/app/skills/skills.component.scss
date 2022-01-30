@@ -1,0 +1,100 @@
+@import '~src/theme';
+.skills{
+  position: absolute; // needed here to overwrite mat-card position relative
+  display: flex;
+  justify-content: center;
+  background: url("https://cdn.pixabay.com/photo/2018/11/17/07/10/desktop-3820634_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1{
+  font-weight: bold;
+  margin: 4%;
+  color: black;
+}
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: mat-color($accent);
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  //background: rgb(144, 164, 174);
+  background: rgba(240, 98, 146, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+.slider > a:active {
+  top: 1px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  margin-top: 16px;
+  color: black;
+  &.french{
+    background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgba(9,9,121,1) 0%,
+      rgba(255,255,255,1) 50%,
+      rgba(238,19,19,1) 100%);
+  }
+  &.german{
+    background: rgb(0,0,4);
+    background: linear-gradient(90deg, rgba(0,0,4,1) 0%,
+      rgba(251,194,4,1) 50%,
+      rgba(238,19,19,1) 100%);
+  }
+  &.english{
+    background: rgba(55,137,241,0.3);
+  }
+
+}

@@ -1,0 +1,16 @@
+<who-navbar (darkModeSwitched)="switchMode($event)"
+            [isDarkMode]="isDarkMode">
+  <who-dashboard
+    (selectedCardChange)="handleCardChange($event)"
+    [ngSwitch]="selectedComponentFromCard">
+    <who-me *ngSwitchCase="'me'"></who-me>
+    <who-professional *ngSwitchCase="'professional'"></who-professional>
+    <who-education *ngSwitchCase="'education'"></who-education>
+    <who-skills *ngSwitchCase="'skills'"></who-skills>
+    <who-theses *ngSwitchCase="'theses'"></who-theses>
+    <who-welcome *ngSwitchDefault></who-welcome>
+  </who-dashboard>
+</who-navbar>
+
+<!--<router-outlet></router-outlet>-->
+

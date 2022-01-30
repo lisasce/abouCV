@@ -1,0 +1,18 @@
+<div class="grid-container">
+       <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows" >
+        <mat-card class="example-ripple-container mat-elevation-z4 dashboard-card"
+                  (click)="selectcard(card.value)"
+                  matRipple
+                  [matRippleColor]="rippleColor"
+                  [style.background]="card.color"
+                  [ngClass]="card.title === '' ? 'fotoclass' : ''">
+          <h1 class="h1">{{card.title}}</h1>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<ng-content></ng-content>
+
+

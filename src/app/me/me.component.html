@@ -1,0 +1,47 @@
+<div class="grid-container">
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="4" [rowspan]="4">
+      <mat-card class="subcard me">
+        <div class="polaroidContainer">
+          <div id="polaroidLeft" class="polaroid rotate_left">
+            <img src="https://cdn.pixabay.com/photo/2016/01/30/16/31/mtb-1169960_1280.jpg" alt="mountain" width="250"
+                 height="230">
+            <p class="caption">Riding & mountain</p>
+          </div>
+
+          <div id="polaroidRight" class="polaroid rotate_right">
+            <img src="https://cdn.pixabay.com/photo/2015/05/31/10/58/golden-791072__480.jpg" alt="coffeeBook"
+                 width="250"
+                 height="230">
+            <p class="caption">Reading & coffee</p>
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-card class="small-card">
+      <mat-card-title-group>
+        <mat-card-title color="primary">Who am I?</mat-card-title>
+        <mat-card-subtitle class="button-box">
+          <a href="https://www.linkedin.com/" target="_blank" class="mdi mdi-linkedin" color="accent">
+          </a>
+          <a href="mailto:john.doe@gmail.com" class="mdi mdi-email-check-outline">
+          </a>
+          <a href="https://www.github.com/" target="_blank" class="mdi mdi-github">
+          </a>
+
+        </mat-card-subtitle>
+        <img mat-card-sm-image src="https://cdn.pixabay.com/photo/2015/07/20/12/53/gehlert-852762__480.jpg">
+      </mat-card-title-group>
+      <mat-card-content>
+        <div>
+          <h2>John Doe,</h2>
+          <p>Born on the 5th of march 1994 in Vienna.</p>
+          <p>I have the austrian nationality.</p>
+          <p>Some of my Hobbies are for example:</p>
+          <p>Riding bike, being in the mountains,</p>
+          <p>drinking coffee, taking care of animals especially cats.</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-list>
+</div>

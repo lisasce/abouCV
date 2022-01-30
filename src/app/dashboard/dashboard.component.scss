@@ -1,0 +1,33 @@
+h1{
+  font-weight: bold;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.5);
+  transition: transform 1s linear;
+  // TODO coins carres
+}
+
+.dashboard-card:not(.h1):hover{
+  transform: scale(1.5);
+  transition: transform 1s linear;
+}
+
+
+.fotoclass{
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}

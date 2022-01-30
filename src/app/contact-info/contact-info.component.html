@@ -1,0 +1,26 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+    <span [ngSwitch]="node.type">
+      <a *ngSwitchCase="'email'" href="mailto:{{node.name}}
+         ?body=Hi John%20Doe,%0D%0A%0D%0Ai%20have%20a%20question:%20">{{node.name}}</a>
+      <a *ngSwitchCase="'phone'" href="tel:{{node.name}}">{{node.name}}</a>
+      <a *ngSwitchDefault>{{node.name}}</a>
+    </span>
+  </mat-tree-node>
+
+  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+    <button mat-icon-button matTreeNodeToggle
+            [attr.aria-label]="'Toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    <mat-icon class="type-icon" [attr.aria-label]="node.name">
+      {{ node.type }}
+    </mat-icon>
+    {{node.name}}
+    <mat-progress-bar *ngIf="node.isLoading"
+                      mode="buffer"
+                      class="example-tree-progress-bar"></mat-progress-bar>
+  </mat-tree-node>
+</mat-tree>

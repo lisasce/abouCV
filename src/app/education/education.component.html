@@ -1,0 +1,62 @@
+<div class="grid-container">
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="4" [rowspan]="5" >
+      <mat-card class="subcard education" >
+        <mat-accordion class="accordion">
+          <h1>My Educational Background</h1>
+          <mat-expansion-panel [expanded]="true" (opened)="panel1OpenState = true"
+                               (closed)="panel1OpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Master:
+              </mat-panel-title>
+              <mat-panel-description class="panel-description">
+                <span>in TU Vienna since 2020</span>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <h2>What I do there:</h2>
+            <p>WORK IN PROGRESS</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panel2OpenState = true"
+                               (closed)="panel2OpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Bachelor:
+              </mat-panel-title>
+              <mat-panel-description class="panel-description">
+                <span>in TU Vienna from 2016 to 2020</span>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <h2>What I did there:</h2>
+            <p>Lead developer since 2021</p>
+            <p>Software full stack development with:</p>
+            <p>C#, Typescript, Javascript, Vue, Bootstrap 4, SQL, etc etc etc</p>
+            <p>Scrum way of work</p>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panel3OpenState = true"
+                               (closed)="panel3OpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                High School and college
+              </mat-panel-title>
+              <mat-panel-description class="panel-description">
+                <span>in Vienna from 2012 to 2016</span>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <h2>What I did there:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit</p>
+          </mat-expansion-panel>
+
+        </mat-accordion>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
