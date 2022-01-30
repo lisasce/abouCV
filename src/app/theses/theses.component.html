@@ -5,66 +5,64 @@
 
         <div class="content">
           <div>
-          <div id="polaroidLeft" class="polaroid rotate_left">
-            <img src="https://ngdevs.net/img/matrix-4493780_960_720.jpg" alt="security"
-                 width="250"
-                 height="250">
-            <h3 class="caption">Discover my thesis about security</h3>
+            <div id="polaroidLeft" class="polaroid rotate_left">
+              <img src="https://ngdevs.net/img/matrix-4493780_960_720.jpg" alt="security"
+                   width="250"
+                   height="250">
+              <h3 class="caption">Discover my thesis about security</h3>
+            </div>
           </div>
-          </div>
-          <div>
-            <h1>My Bachelor and Master Theses</h1>
-           <mat-accordion class="accordion">
+            <mat-accordion class="accordion">
+              <h1>My Theses</h1>
+              <mat-expansion-panel (opened)="panel1OpenState = true"
+                                   (closed)="panel1OpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Master:
+                  </mat-panel-title>
+                  <mat-panel-description class="panel-description">
+                    <span>TU Vienna - estimated end: 2024</span>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <h2>WORK IN PROGRESS - Power grid security</h2>
+                <h4>This thesis is about:</h4>
+                <p>We will see... :)</p>
+                <p>pdf and Github link as soon as available below.</p>
+                <!--              <div class="button-box">
+                                <button mat-stroked-button> see the code:
+                                  <a href="https://www.github.com/" target="_blank" class="mdi mdi-github"></a>
+                                </button>
+                                <button mat-stroked-button><a href="assets/test.pdf" download="newfilename">Download the pdf</a></button>
+                              </div>-->
+              </mat-expansion-panel>
 
-            <mat-expansion-panel (opened)="panel1OpenState = true"
-                                 (closed)="panel1OpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Master Thesis:
-                </mat-panel-title>
-                <mat-panel-description class="panel-description">
-                  <span>TU Vienna - estimated year of end: 2024</span>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <h2>WORK IN PROGRESS - Power grid security</h2>
-              <h4>This thesis is about:</h4>
-              <p>We will see... :)</p>
-              <p>pdf and Github link as soon as available below.</p>
-<!--              <div class="button-box">
-                <button mat-stroked-button> see the code:
-                  <a href="https://www.github.com/" target="_blank" class="mdi mdi-github"></a>
-                </button>
-                <button mat-stroked-button><a href="assets/test.pdf" download="newfilename">Download the pdf</a></button>
-              </div>-->
-            </mat-expansion-panel>
-
-            <mat-expansion-panel [expanded]="true"  (opened)="panel2OpenState = true"
-                                 (closed)="panel2OpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Bachelor Thesis:
-                </mat-panel-title>
-                <mat-panel-description class="panel-description">
-                  <span>TU Vienna - date of thesis: 2020</span>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <h2> Dynamische Webanwendungen gegen Cookie Missbrauch und ungewollte Code Ausführung absichern</h2>
-              <h4>This thesis is about:</h4>
-              <p>Exploration of frequent and dangerous security vulnerabilities of dynamic web applications and mitigations </p>
-              <p>Analysis of the  exploit tool Poisontap and creation of a browser extension detecting the usage</p>
-              <p>Security checklist for web applications</p>
-              <div class="button-box">
-                <button mat-stroked-button> see the code:
-                  <a href="https://github.com/NihadAbouzid/poisonProtect" target="_blank" class="mdi mdi-github"></a>
-                </button>
-                <button mat-stroked-button><a href="assets/thesis.pdf" download="thesisAbouZid">Download the pdf</a></button>
-               <button mat-stroked-button><a href="assets/thesis.pdf" target="_blank">Watch the pdf</a></button>
-              </div>
-            </mat-expansion-panel>
+              <mat-expansion-panel [expanded]="true" (opened)="panel2OpenState = true"
+                                   (closed)="panel2OpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Bachelor:
+                  </mat-panel-title>
+                  <mat-panel-description class="panel-description">
+                    <span>TU Vienna - date of thesis: 2020</span>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <h2>Website Security</h2>
+                <h4>This thesis is about:</h4>
+                <p>Exploration of frequent and dangerous security vulnerabilities of dynamic web applications and
+                  mitigations </p>
+                <p>Analysis of the exploit tool Poisontap and creation of a browser extension detecting the usage</p>
+                <p>Security checklist for web applications</p>
+                <div class="button-box">
+                  <button mat-stroked-button> see the code:
+                    <a href="https://github.com/NihadAbouzid/poisonProtect" target="_blank" class="mdi mdi-github"></a>
+                  </button>
+                  <button mat-stroked-button><a href="assets/thesis.pdf" target="_blank">Watch the pdf</a></button>
+                </div>
+              </mat-expansion-panel>
 
 
-          </mat-accordion>
-          </div>
+            </mat-accordion>
+
         </div>
       </mat-card>
     </mat-grid-tile>
