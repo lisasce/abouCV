@@ -11,7 +11,6 @@ export class MeComponent implements OnInit, OnDestroy {
   destroyed = new Subject<void>();
 
   constructor(private breakpointObserver: BreakpointObserver) {
-
   }
 
   ngOnDestroy(): void {

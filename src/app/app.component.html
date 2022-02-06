@@ -3,6 +3,7 @@
   <who-dashboard
     (selectedCardChange)="handleCardChange($event)"
     [ngSwitch]="selectedComponentFromCard">
+    <span #scrollIntoViewHelper></span>
     <who-me *ngSwitchCase="'me'"></who-me>
     <who-professional *ngSwitchCase="'professional'"></who-professional>
     <who-education *ngSwitchCase="'education'"></who-education>
@@ -12,5 +13,4 @@
   </who-dashboard>
 </who-navbar>
 
-<!--<router-outlet></router-outlet>-->
 

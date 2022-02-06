@@ -14,17 +14,18 @@ h1{
   align-items: center;
   cursor: pointer;
 }
+@media (hover: hover) {
+  .dashboard-card:hover {
+    transform: scale(1.5);
+    transition: transform 1s linear;
+  }
 
-.dashboard-card:hover {
-  transform: scale(1.5);
-  transition: transform 1s linear;
+
+  .dashboard-card:not(.h1):hover{
+    transform: scale(1.5);
+    transition: transform 1s linear;
+  }
 }
-
-.dashboard-card:not(.h1):hover{
-  transform: scale(1.5);
-  transition: transform 1s linear;
-}
-
 
 .fotoclass{
   background-size: cover !important;

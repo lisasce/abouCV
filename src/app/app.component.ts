@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 
 @Component({
@@ -7,6 +7,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild("scrollIntoViewHelper")
+  scrollHelper: ElementRef<HTMLSpanElement> | undefined;
+
   title = 'whoami';
   selectedComponentFromCard = '';
 
@@ -30,6 +33,10 @@ export class AppComponent {
 
 
   handleCardChange(recievedCardTitle: string) {
+    setTimeout( ()=> {
+      this.scrollHelper?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 0 )
+
     this.selectedComponentFromCard = recievedCardTitle;
   }
 }

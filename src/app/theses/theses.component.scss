@@ -10,7 +10,7 @@ h1{
 }
 
 .accordion{
-  width: 100%;
+  width: auto;
 }
 
 .button-box{
@@ -21,9 +21,8 @@ h1{
 
 div.content {
   width: 100%;
-  padding: 8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 div.polaroid {
@@ -32,6 +31,8 @@ div.polaroid {
   border: 1px solid #BFBFBF;
   background-color: white;
   box-shadow: 10px 10px 5px #303030;
+  position: relative;
+  right: 55px;
 }
 
 div.rotate_left {

@@ -19,7 +19,7 @@ export class ThesesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Small])
+    this.breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
       .pipe(takeUntil(this.destroyed))
       .subscribe(result => {
         this.hidePolaroidOnSmallScreen(result.matches)
@@ -31,7 +31,6 @@ export class ThesesComponent implements OnInit, OnDestroy {
     if (!isSmall) {
       document.getElementById('polaroidLeft')?.classList.remove('hide');
     } else if (isSmall) {
-
       document.getElementById('polaroidLeft')?.classList.add('hide');
     }
   }
