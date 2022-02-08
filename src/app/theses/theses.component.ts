@@ -11,6 +11,7 @@ export class ThesesComponent implements OnInit, OnDestroy {
   panel1OpenState = false;
   panel2OpenState = false;
   destroyed = new Subject<void>();
+  showPolaroid = false;
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnDestroy(): void {
@@ -29,9 +30,9 @@ export class ThesesComponent implements OnInit, OnDestroy {
 
   hidePolaroidOnSmallScreen(isSmall: boolean) {
     if (!isSmall) {
-      document.getElementById('polaroidLeft')?.classList.remove('hide');
+      this.showPolaroid = true;
     } else if (isSmall) {
-      document.getElementById('polaroidLeft')?.classList.add('hide');
+      this.showPolaroid = false;
     }
   }
 

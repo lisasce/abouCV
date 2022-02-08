@@ -9,7 +9,7 @@
             <p class="caption">Riding & mountain</p>
           </div>
 
-          <div id="polaroidRight" class="polaroid rotate_right">
+          <div *ngIf="showPolaroid" id="polaroidRight" class="polaroid rotate_right">
             <img src="https://ngdevs.net/img/golden-791072__480.jpg" alt="coffeeBook"
                  width="250"
                  height="230">
@@ -30,7 +30,7 @@
           </a>
 
         </mat-card-subtitle>
-        <img mat-card-sm-image src="https://ngdevs.net/img/nihad.jpg">
+        <img id="smallMe" src="https://ngdevs.net/img/nihad.jpg" alt="me2">
       </mat-card-title-group>
       <mat-card-content>
         <div>

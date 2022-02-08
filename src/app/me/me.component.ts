@@ -9,7 +9,7 @@ import {Subject, takeUntil} from "rxjs";
 })
 export class MeComponent implements OnInit, OnDestroy {
   destroyed = new Subject<void>();
-
+  showPolaroid = false;
   constructor(private breakpointObserver: BreakpointObserver) {
   }
 
@@ -29,12 +29,10 @@ export class MeComponent implements OnInit, OnDestroy {
 
   hidePolaroidOnSmallScreen(isSmall: boolean) {
     if (!isSmall) {
-      document.getElementById('polaroidRight')?.classList.remove('hide');
-      document.getElementById('polaroidRight')?.classList.add('show');
+      this.showPolaroid = true;
       document.getElementById('polaroidLeft')?.classList.remove('centering');
     } else if (isSmall) {
-      document.getElementById('polaroidRight')?.classList.remove('show');
-      document.getElementById('polaroidRight')?.classList.add('hide');
+      this.showPolaroid = false;
       document.getElementById('polaroidLeft')?.classList.add('centering');
     }
   }
