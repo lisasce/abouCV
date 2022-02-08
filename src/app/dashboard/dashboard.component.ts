@@ -20,7 +20,7 @@ export class DashboardComponent {
   @Output() selectedCardChange = new EventEmitter<string>();
   selectedCard = 'welcome';
 
-  rippleColor = '#8BC34A';
+  rippleColor = 'rgba(133,187,101, 0.5)';
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(

@@ -1,3 +1,4 @@
+@import '~src/theme';
 h1{
   font-size: larger;
 }
@@ -19,4 +20,8 @@ h1{
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+#visitcard{
+  color: mat-color($accent);
 }
