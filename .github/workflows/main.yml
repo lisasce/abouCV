@@ -42,9 +42,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run ng build --prod --sourceMap=false --base-href
-      - name: Test
-        run: npm run ng test --watch=false --code-coverage --source-map true --browsers=ChromeHeadless
-        
+
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
