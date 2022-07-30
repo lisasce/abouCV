@@ -67,4 +67,4 @@ jobs:
           key: ${{ secrets.SERVER_PASS }}
           source: "deploy_dist/whoami"
           target: "/var/www/vhosts/ngdevs.net/nihad.ngdevs.net"
-          rm: true
+          overwrite: true
